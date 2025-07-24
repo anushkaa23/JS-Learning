@@ -5,7 +5,7 @@
 let name="Anushka"
 let age=18
 let isLoggedIn=true;
-let state=null
+let temp=null
 let state //undefined 
 
 // Number => 2^53
@@ -18,5 +18,5 @@ let state //undefined
 
 // object 
 
-console.log()
+console.log(typeof(age))
 
