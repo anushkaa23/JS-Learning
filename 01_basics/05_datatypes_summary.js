@@ -37,4 +37,23 @@ const myFunct = function(){
     console.log("hello World")
 }
 
-console.log(typeof(bigNumber))
+// console.log(typeof(bigNumber))
+
+// stack(primitive) , heap(non-primitive)
+
+let a=1
+let b =2
+b=a
+a=4
+// console.table([a,b])
+
+let user1 = {
+    email:"user@gmail.com",
+    upi: "user@yabl"
+}
+
+let user2=user1
+// console.table([user1.email,user2.email])
+user1.email = "anushka@gmail.com"
+console.table([user1.email,user2.email])
+
