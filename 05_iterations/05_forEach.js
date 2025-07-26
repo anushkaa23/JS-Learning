@@ -5,6 +5,7 @@
 
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
+// no function name
 // coding.forEach(function(val){
 //     // console.log(val)
 // })
@@ -16,6 +17,8 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 // function printME(item){
 //     console.log(item);
 // }
+
+// bas reference dena h execute nhi
 // coding.forEach(printME)
 
 // coding.forEach( (item, index, arr)=> {
