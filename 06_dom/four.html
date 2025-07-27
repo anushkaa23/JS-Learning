@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM part4</title>
+</head>
+<body style="background-color: #212121; color: antiquewhite;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(LangName){
+        const li = document.createElement('li');
+        // prblm -> 1 addition k liye pura tree traverse krna pdta h 
+        li.innerHTML=`${LangName}`
+        const parent=document.querySelector(".language")
+        parent.appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("C++")
+
+    function addOptimisedLang(langname){
+        const li=document.createElement('li')
+        // pura tree traverse nahi krna hoga 
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimisedLang("C")
+    addOptimisedLang("PowerShell")
+
+    // edit
+    const secondLang= document.querySelector("li:nth-child(2)")
+    // same issue it is not an optimised approach
+    // secondLang.innerHTML="Mojo"
+    const newLi= document.createElement('li')
+    newLi.appendChild(document.createTextNode("Mojo"))
+    secondLang.replaceWith(newLi)
+
+    // edit
+    const firstLang=document.querySelector("li:first-child")
+    console.log(firstLang)
+    firstLang.outerHTML="<li>TypeScript</li>"
+
+    //remove
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
