@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Practice</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayHi = function(){
+        console.log("Hiiiii");
+        
+    }
+    // setTimeout(function(){
+    //     console.log("HI")
+    // },2000)//2 sec ka timer
+    setTimeout(sayHi,2000)//bs reference dena h
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="My first js learning series"
+    }
+    // setTimeout(changeText,2000)
+    // setInterval(function(){},durationinMS) //will do continuously after certain duration 
+    const changeMe=setTimeout(changeText,2000)
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Stopppeeed");
+        
+    })
+</script>
+</html>

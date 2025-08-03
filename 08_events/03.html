@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Practice in File 3</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayTime=function(str){
+        const now = new Date();
+        const currentTime = now.toLocaleTimeString();
+        console.log(str,currentTime);
+    }
+    let StartInterval=null
+    document.querySelector("#start").addEventListener('click',function(){
+        if(StartInterval===null){
+            StartInterval=setInterval(sayTime,1000,"Current time in India is ")
+        }
+    })
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearInterval(StartInterval)
+        StartInterval=null
+    })
+</script>
+</html>
